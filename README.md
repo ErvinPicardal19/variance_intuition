@@ -9,6 +9,7 @@ This program shows the difference between unbiased variance and biased variance.
 ### $\LARGE{\frac{\Sigma_{i=o}^{n} (x_i - \overline{x})^2}{n}}$
 
 ## Demo
+### Sample size: 2
 ![Alt Text](./asset/demo.gif)
 
 ## Install
