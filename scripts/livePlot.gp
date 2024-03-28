@@ -14,7 +14,7 @@ num_samples=system("awk '{print $1}' ../data/population_data.dat")
 num_samples = num_samples+0
 f(x) = true_variance+0
 
-set ytics ("0" 0, "Pop. variance" true_variance)
+set ytics ("0" 0, "True variance" true_variance)
 
 while(1) {
    pause 0.200
