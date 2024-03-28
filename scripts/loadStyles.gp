@@ -13,7 +13,7 @@ set tics nomirror
 unset tics
 # set xtics scale 1.5
 
-set xlabel "Sample Size" font ",16"
+set xlabel "# of samples" font ",16"
 set ylabel "Cumulative Variance" font ",16"
 # set ylabel offset 0
 
