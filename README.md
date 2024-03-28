@@ -7,10 +7,10 @@
 Just a simple demonstration as to why we divide the sum of each squared difference between the sum and mean by *(n-1)* rather than *n* for when sampling a population. 
 
 ### Sample variance:
-### $\large{\frac{\Sigma_{i=o}^{n} (x_i - \overline{x})^2}{n-1}}$
+### $\LARGE{\frac{\Sigma_{i=o}^{n} (x_i - \overline{x})^2}{n-1}}$
 
 ### Population variance:
-### $\large{\frac{\Sigma_{i=o}^{n} (x_i - \mu)^2}{n}}$
+### $\LARGE{\frac{\Sigma_{i=o}^{n} (x_i - \mu)^2}{n}}$
 
 ## Install
 run `build.sh`
