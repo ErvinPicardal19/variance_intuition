@@ -24,3 +24,7 @@ run `make`
 cd build
 make
 ```
+run `./variance_test`
+```
+./variance_test
+```
