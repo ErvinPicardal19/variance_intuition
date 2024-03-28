@@ -10,7 +10,10 @@ This program shows the difference between unbiased variance and biased variance.
 
 ## Demo
 #### Sample size: 5
-![Alt Text](./asset/demo.gif)
+![Alt Text](./asset/sample_size_five.gif)
+
+#### Sample size: 10
+![Alt Text](./asset/sample_size_ten.gif)
 
 ## Install
 run `build.sh`
