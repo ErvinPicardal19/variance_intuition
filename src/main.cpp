@@ -1,3 +1,22 @@
+/*********************************************************
+This program show the difference between unbiased variance
+and biased variance. I got this idea from Khan Academy as
+I was having a hard time understanding as to why we use
+(n-1) when getting the sample variance but (n) when getting
+the population variance. What this does is generate a random
+population with 200 elements that have values ranging from 0-200.
+Then it does random sampling with the given SAMPLE_SIZE*SAMPLES,
+for each sampling it calculate the cumulative variance mean and
+plot it. As the sample size grow for each sampling the plot for
+(n-1) should be converging with the population variance giving us
+a better approximation than the plot for (n).
+*********************************************************/
+
+// change this to decrease/increase how many times we take a sample
+#define SAMPLES 300
+// change this to decrease/increase the sample size
+#define SAMPLE_SIZE 5
+
 #include <iostream>
 #include <stdio.h>
 #include <thread>
@@ -110,22 +129,20 @@ void start_program()
    std::vector<double> biased_variances_means;
 
    int i = 0;
-   int samples = 300;
-   int sample_size = 5;
    
-   write_file(samples, true_variance, false, "population_data.dat");
+   write_file(SAMPLES, true_variance, false, "population_data.dat");
 
-   while(i < samples)
+   while(i < SAMPLES)
    {
-      std::vector<double> sample = get_sample(population, sample_size);
+      std::vector<double> sample = get_sample(population, SAMPLE_SIZE);
       double mean_ = stats::mean(sample);
 
 
       biased_variances.push_back(stats::variance(sample, mean_, true));
       unbiased_variances.push_back(stats::variance(sample, mean_, false));
 
-      write_file(i * sample_size, stats::mean(unbiased_variances), true, "unbiased_data.dat");
-      write_file(i * sample_size, stats::mean(biased_variances), true, "biased_data.dat");
+      write_file(i * SAMPLE_SIZE, stats::mean(unbiased_variances), true, "unbiased_data.dat");
+      write_file(i * SAMPLE_SIZE, stats::mean(biased_variances), true, "biased_data.dat");
       i++;
 
 
